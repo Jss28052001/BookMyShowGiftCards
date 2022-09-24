@@ -1,0 +1,125 @@
+<html>
+
+<head>
+  <title>Login_Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(to right, #161616, #000000);
+    }
+
+    label {
+      color: #833ab4;
+      padding: 8px;
+      font-size: 20px;
+    }
+
+    button {
+      background: #833ab4;
+      background: -webkit-linear-gradient(to right, #5c3af3, #833ab4);
+      background: linear-gradient(to right, #5c3af3, #833ab4);
+      width: 15%;
+      padding: 15px;
+      color: white;
+      border: none;
+      float: center;
+      font-size: 15px;
+    }
+
+
+    label {
+      font-size: 20px;
+    }
+
+
+
+    input[type=email],
+    input[type=password] {
+      width: 25%;
+      font-size: 15px;
+      margin: 8px 0px;
+      padding: 12px 20px;
+      display: inline-block;
+      border: 2px solid #833ab4;
+      box-sizing: border-box;
+    }
+
+    button:hover {
+      opacity: 0.7;
+
+    }
+
+    .container {
+      padding: 50px;
+      background: linear-gradient(to right, #161616, #000000);
+    }
+
+    .imgcontainer1 {
+      position: absolute;
+      top: 2%;
+      left: 0;
+      margin: 24px 0 12px 0;
+      padding-right: 100%;
+    }
+
+    img.avatar2 {
+      max-width: 250px;
+      max-height: 250px;
+      margin-top: -35px;
+      margin-left: 30px;
+    }
+
+
+    .imgcontainer {
+      text-align: center;
+      margin: 24px 0 12px 0;
+      padding-left: 80px;
+    }
+
+    img.avatar {
+      width: 20%;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <h1 style="color: #833ab4;"><b><u><br>LOGIN</u></b> </h1>
+  </center>
+  <form action="#" method="post">
+    {% csrf_token %}
+    {% load static %}
+    <center>
+
+      <div class="container" style="color:#833ab4">
+        <div class="imgcontainer1">
+          <img
+            src="{% static 'kisspng-bookmyshow-india-ticket-business-logo-book-store-5b2a4935ac4d08.4182745815294979097058.png' %}"
+            alt="Avatar" class="avatar2">
+        </div>
+        <div class="imgcontainer">
+          <img src="{% static 'images.jpg' %}" alt="Avatar" class="avatar">
+          <br><br><br><br>
+        </div>
+
+        <label for='email'><b>UserEmail: </b></label>
+        <input type="email" placeholder="Enter email" name="email" float="right" required><br>
+        <label for='password'><b>Password: </b></label>
+        <input type="password" placeholder="Enter Password" name="password" required><br>
+        <button type="submit" style="color:white"><b>Login</b></button><br>
+        Don't have account : <a href="http://localhost:8000/signup/" style="color:white"> Register </a>
+      </div>
+    </center>
+  </form>
+</body>
+
+</html>

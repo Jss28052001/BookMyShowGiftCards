@@ -1,0 +1,112 @@
+<html>
+
+<head>
+  <title>Sell Gift-Cards Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(to right, #161616, #000000);
+    }
+
+
+    label {
+      color: #833ab4;
+      padding: 8px;
+      font-size: 20px;
+    }
+
+    button {
+      background: #833ab4;
+      background: -webkit-linear-gradient(to right, #5c3af3, #833ab4);
+      background: linear-gradient(to right, #5c3af3, #833ab4);
+      width: 7%;
+      padding: 15px;
+      color: white;
+      border: none;
+      float: center;
+      font-size: 15px;
+    }
+
+    input[type=text],
+    input[type=number],
+    input[type=date] {
+      width: 25%;
+      font-size: 15px;
+      margin: 8px 0px;
+      padding: 12px 20px;
+      display: inline-block;
+      border: 2px solid #833ab4;
+      box-sizing: border-box;
+    }
+
+
+
+    button:hover {
+      opacity: 0.7;
+
+    }
+
+    .container {
+      padding: 50px;
+      background: linear-gradient(to right, #161616, #000000);
+    }
+
+    .imgcontainer1 {
+      position: absolute;
+      top: 2%;
+      left: 0;
+      margin: 24px 0 12px 0;
+      padding-right: 100%;
+    }
+
+    img.avatar2 {
+      max-width: 250px;
+      max-height: 250px;
+      margin-top: -35px;
+      margin-left: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <h1 style="color: #833ab4;"><b><u><br><br>Sell Gift-Cards</u></b></h1>
+  </center>
+  <form action="#" method="post">
+    {% csrf_token %}
+    {% load static %}
+    <center>
+      <div class="container" style="color:#833ab4">
+        <div class="imgcontainer1">
+          <img
+            src="{% static 'kisspng-bookmyshow-india-ticket-business-logo-book-store-5b2a4935ac4d08.4182745815294979097058.png' %}"
+            alt="Avatar" class="avatar2">
+        </div>
+        <label for='full_name'><b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Full Name :
+          </b></label>
+        <input type='text' placeholder="Enter your full_name name" name='full_name' required><br>
+        <label for='giftcard_id'><b>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; GiftCard id
+            :</b></label>
+        <input type='text' placeholder='Enter your giftcard_id' name='giftcard_id' required><br>
+        <label for='giftcard_password'><b> &nbsp; &nbsp;GiftCard Password : </b></label>
+        <input type="text" placeholder="Enter giftcard_password" name="giftcard_password" required><br>
+        <label for='id_amount'><b>&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;GiftCard amount : </b></label>
+        <input type="number" placeholder="Enter GiftCard_amount" name="id_amount" required><br>
+        <label for='expiry_date'><b>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Expiry Date :
+          </b></label>
+        <input type="date" placeholder="Enter expiry_date" name="expiry_date" required><br>
+        <button type="submit" style="color: white">Sell</button><br>
+      </div>
+    </center>
+  </form>
+</body>
+
+</html>

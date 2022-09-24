@@ -1,0 +1,130 @@
+<html>
+
+<head>
+  <title>Buy_page</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(to right, #161616, #000000);
+    }
+
+    .imgcontainer1 {
+      position: absolute;
+      top: 2%;
+      left: 0;
+      margin: 24px 0 12px 0;
+      padding-right: 100%;
+    }
+
+    img.avatar2 {
+      max-width: 250px;
+      max-height: 250px;
+      margin-top: -35px;
+      margin-left: 30px;
+    }
+
+    label {
+      color: #833ab4;
+      padding: 8px;
+      font-size: 20px;
+    }
+
+    input[type=number] {
+      width: 25%;
+      font-size: 15px;
+      margin: 8px 0px;
+      padding: 12px 20px;
+      display: inline-block;
+      border: 2px solid #833ab4;
+      box-sizing: border-box;
+    }
+
+    button {
+      background: #833ab4;
+      background: -webkit-linear-gradient(to right, #5c3af3, #833ab4);
+      background: linear-gradient(to right, #5c3af3, #833ab4);
+      width: 15%;
+      padding: 15px;
+      color: white;
+      border: none;
+      float: center;
+      font-size: 15px;
+    }
+
+    button:hover {
+      opacity: 0.7;
+
+    }
+  </style>
+
+</head>
+
+<body>
+  <center>
+    <h1 style="color: #833ab4;"><b><u><br>SELECT YOUR GIFTCARDS</u></b> </h1>
+  </center>
+  <form action="#" method="post">
+    {% csrf_token %}
+    {% load static %}
+    <div class="table">
+      <div class="imgcontainer1">
+        <img
+          src="{% static 'kisspng-bookmyshow-india-ticket-business-logo-book-store-5b2a4935ac4d08.4182745815294979097058.png' %}"
+          alt="Avatar" class="avatar2">
+      </div>
+      <table width="350px" border="10px" align="center" style="color: #833ab4;">
+        <tr>
+          <td>SL.No</td>
+          <td>Voucher Amount</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>100 Rs</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>200 Rs</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>250 Rs</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>500 Rs</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>750 Rs</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>1000 Rs</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>1500 Rs</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>2000 Rs</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>5000 Rs</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>10000 Rs</td>
+        </tr>
+    </div>
+    <label for='amount'><b>ENTER THE AMOUNT YOU WANT TO BUY</b></label>
+    <input type="number" placeholder="Enter AMOUNT" name="amount" required><br>
+    <button type="submit"><b>pay</b></button><br>
+
+    </table>
+
+  </form>
+</body>
+
+</html>

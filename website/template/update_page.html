@@ -1,0 +1,152 @@
+<html>
+
+<head>
+  <title>BMS_updates</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(to right, #161616, #000000);
+    }
+
+
+    label {
+      color: #833ab4;
+      padding: 8px;
+      font-size: 20px;
+    }
+
+    button {
+      background: #833ab4;
+      background: -webkit-linear-gradient(to right, #5c3af3, #833ab4);
+      background: linear-gradient(to right, #5c3af3, #833ab4);
+      width: 15%;
+      padding: 15px;
+      color: white;
+      border: none;
+      float: center;
+      font-size: 15px;
+    }
+
+    input[type=email],
+    input[type=text] {
+      width: 25%;
+      font-size: 15px;
+      margin: 8px 0px;
+      padding: 12px 20px;
+      display: inline-block;
+      border: 2px solid #833ab4;
+      box-sizing: border-box;
+    }
+
+    input[type=radio] {
+      height: 18px;
+      width: 18px;
+    }
+
+    button:hover {
+      opacity: 0.7;
+
+    }
+
+    .imgcontainer1 {
+      position: absolute;
+      top: 2%;
+      left: 0;
+      margin: 24px 0 12px 0;
+      padding-right: 100%;
+    }
+
+    img.avatar2 {
+      max-width: 250px;
+      max-height: 250px;
+      margin-top: -35px;
+      margin-left: 30px;
+    }
+
+    .imgcontainer {
+      text-align: center;
+      margin: 24px 0 12px 0;
+    }
+
+    img.avatar {
+      width: 15%;
+      border-radius: 60%;
+      margin-top: 0px;
+    }
+
+    .btns {
+      margin: 25px 0px;
+      display: inline-flexbox;
+      color: #69a6ce;
+
+    }
+
+    .btns a {
+      display: inline-flexbox;
+      margin: 0 10px;
+      text-decoration: None;
+      border: 2px solid #69a6ce;
+      background: linear-gradient(to right, #161616, #000000);
+      color: #ced5da;
+      font-weight: 500;
+      padding: 10px 25px;
+      border-radius: 0px;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .btns a:hover {
+      background: #9b59b6;
+      color: #fff;
+    }
+
+    .btns:after {
+      text-align: center;
+      padding: 10px 250px;
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <h1 style="color: #833ab4;"><b><br><u>BOOK MY SHOW UPDATES REGISTRATION</u></b> </h1>
+  </center>
+  <form action="#" method="post">
+    {% csrf_token %}
+    {% load static %}
+    <center>
+      <div class="container" style="color:#833ab4">
+        <div class="imgcontainer1">
+          <img
+            src="{% static 'kisspng-bookmyshow-india-ticket-business-logo-book-store-5b2a4935ac4d08.4182745815294979097058.png' %}"
+            alt="Avatar" class="avatar2">
+        </div>
+
+        <div class="imgcontainer">
+          <img src="{% static 'images.jpg' %}" alt="Avatar" class="avatar">
+        </div>
+        <label for='email'><b>Enter Email for updates: </b></label>
+        <input type="email" placeholder="Enter email" name="email" float="right" required><br>
+        <button type="submit" style="color: white">Submit</button><br>
+        <div class="btns">
+          <a href="http://localhost:8000/signup/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;click
+            here to
+            Signup&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+        <div class="btns">
+          <a href="http://localhost:8000/login/">click here to go back to login</a>
+        </div>
+      </div>
+    </center>
+  </form>
+</body>
+
+</html>
